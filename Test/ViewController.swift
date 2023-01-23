@@ -1,65 +1,80 @@
 import UIKit
-import AVFoundation
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var timeLabel: UILabel!
+class ViewController: UIViewController, UITextFieldDelegate { // 프로토
     
-    @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var startButton: UIButton!
-    
-    @IBOutlet weak var slider: UISlider!
-    
-    var time = 0
-    weak var timer: Timer?
-    
-    let id: [SystemSoundID] = Array(1000...4000).map {SystemSoundID($0)}
+    @IBOutlet weak var textFleld: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUp()
+        setupUI()
     }
     
-    func setUp() {
-        resetButton.layer.borderWidth = 1
-        resetButton.layer.borderColor = UIColor.black.cgColor
-        startButton.isEnabled = false
+    func setupUI() {
+        textFleld.delegate = self // 대리자 선택
+        
+        textFleld.keyboardType = UIKeyboardType.emailAddress // 키보드 타입
+        textFleld.placeholder = "이메일 입력" // 힌트 메세지
+        textFleld.borderStyle = .roundedRect // 텍스트 필드 선 타입
+        textFleld.clearButtonMode = .always // 클리어 버튼 여부
+        textFleld.returnKeyType = .done // 엔터 버튼 바꾸기
+        textFleld.becomeFirstResponder() // 첫번째 응답객체로 만들기
     }
-
-    func audioSound() {
-        for i in id {
-            AudioServicesPlayAlertSound(i)
+    
+    @IBAction func doneButtonTapped(_ sender: UIButton) {
+        textFleld.resignFirstResponder() // 응답 객체를 사임
+    }
+    
+    // 텍스트 필트 입력을 허락할건지 여부
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print(#function)
+        return true
+    }
+    
+    // 입력을 시작한 시점
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print(#function)
+        view.backgroundColor = .black
+    }
+    
+    // 클리어 버튼 허락 여부
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print(#function)
+        return true
+    }
+    
+    // 텍스트 필드내에서 내용이 변경될 때마다 호출됨 (허락할 지 여부)
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print(#function)
+        if (textField.text?.count)! + string.count > 10 {
+            return false
+        } else {
+            return true
         }
     }
-
-    @IBAction func sliderChanged(_ sender: UISlider) {
-        time = Int(sender.value * 60.0)
-        timeLabel.text = "\(time)초"
-        startButton.isEnabled = true
+    
+    // 엔터키가 눌러졌을 때 다음동작을 허락할 것인지
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print(#function)
+        view.backgroundColor = .opaqueSeparator
+        return true
     }
     
-    @IBAction func startButtonTapped(_ sender: UIButton) {
-        timer?.invalidate()
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [self] _ in
-            if time > 0 {
-                time -= 1
-                timeLabel.text = "\(time)초"
-                slider.setValue(Float(time) / 60.0, animated: true)
-            } else {
-                timer?.invalidate()
-                timeLabel.text = "종료"
-                audioSound()
-                startButton.isEnabled = false
-            }
-        })
+    // 텍스트 필드에 입력이 끝날 때 호출되어서 허락 여부를 판단
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print(#function)
+        return true
     }
-
-    @IBAction func resetButtonTapeed(_ sender: UIButton) {
-        time = 0
-        timer?.invalidate()
-        slider.setValue(0.5, animated: true)
-        timeLabel.text = "초를 선택해주세요"
-        startButton.isEnabled = false
+    
+    // 텍스트 필드에 입력이 실제 끝났을 때 호출
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print(#function)
+        view.backgroundColor = .white
+    }
+    
+    // 다른 곳 터치 시 키보드 종료
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+//        textFleld.resignFirstResponder()
     }
     
 }
