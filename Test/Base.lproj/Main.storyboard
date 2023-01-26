@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,16 +13,237 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ViewControlller" customModule="Test">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DAP-g8-9WZ">
+                                <rect key="frame" x="20" y="176" width="353" height="500"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKg-4q-Bgf">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="87.666666666666671"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="코드로 이동하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hdU-a6-zxt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyo-Vx-gtr">
+                                        <rect key="frame" x="0.0" y="137.66666666666669" width="353" height="87.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="코드로 스토리 보드 객체 생성하여 ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEE-1O-y3B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JU-yh-VqH">
+                                        <rect key="frame" x="0.0" y="275" width="353" height="87.666666666666686"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="스토리보드에서 (간접 세그웨이)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Button3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNa-Z4-257"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1f-4f-LJd">
+                                        <rect key="frame" x="0.0" y="412.66666666666663" width="353" height="87.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="스토리보드에서 (직접 세그웨이)">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dNs-IR-kAs" kind="presentation" identifier="toFourthVC" id="yim-3a-iQH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="eUu-SA-fB4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DAP-g8-9WZ" secondAttribute="trailing" constant="20" id="DyI-10-lrO"/>
+                            <constraint firstItem="DAP-g8-9WZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QOo-bQ-avv"/>
+                            <constraint firstItem="DAP-g8-9WZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jIj-wF-msm"/>
+                            <constraint firstItem="DAP-g8-9WZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xw8-1K-tjb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="BeS-iL-gfK" kind="presentation" identifier="toThirdVC" id="dXs-Kt-lz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="RN4-7b-Yhm">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" id="4A6-7B-7hP" customClass="SecondViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qF4-Ff-zEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WW-tY-zfF">
+                                <rect key="frame" x="80.666666666666686" y="412.66666666666669" width="232" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfd-TR-ZLu">
+                                <rect key="frame" x="146.66666666666666" y="738" width="100" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="iJ9-1D-AEn"/>
+                                    <constraint firstAttribute="height" constant="40" id="u5G-LX-pAr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="뒤로가기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="4A6-7B-7hP" eventType="touchUpInside" id="AyU-74-6B3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WOZ-ca-J7J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yfd-TR-ZLu" firstAttribute="centerX" secondItem="qF4-Ff-zEJ" secondAttribute="centerX" id="1Ds-5C-Z9M"/>
+                            <constraint firstItem="WOZ-ca-J7J" firstAttribute="bottom" secondItem="yfd-TR-ZLu" secondAttribute="bottom" constant="40" id="4iJ-gc-mq0"/>
+                            <constraint firstItem="2WW-tY-zfF" firstAttribute="centerX" secondItem="qF4-Ff-zEJ" secondAttribute="centerX" id="YR9-EF-MVM"/>
+                            <constraint firstItem="2WW-tY-zfF" firstAttribute="centerY" secondItem="qF4-Ff-zEJ" secondAttribute="centerY" id="mjf-a4-DtJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="2WW-tY-zfF" id="1qI-O0-3fR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VF8-KI-LP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-708.45070422535218"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="jFI-Bc-IPa">
+            <objects>
+                <viewController id="BeS-iL-gfK" customClass="ThirdViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="odC-Pa-ktb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThirdViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVY-nb-zNN">
+                                <rect key="frame" x="93.000000000000014" y="378" width="207.33333333333337" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqD-7e-toy">
+                                <rect key="frame" x="146.66666666666666" y="703" width="100" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="byl-Sz-TIc"/>
+                                    <constraint firstAttribute="height" constant="40" id="q8F-zQ-Wzu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="뒤로가기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapeed:" destination="BeS-iL-gfK" eventType="touchUpInside" id="YkR-Cd-J6b"/>
+                                    <action selector="backButtonTapped:" destination="4A6-7B-7hP" eventType="touchUpInside" id="hsF-ps-Cgv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gmI-zx-LXz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fqD-7e-toy" secondAttribute="bottom" constant="40" id="GIM-dg-NAJ"/>
+                            <constraint firstItem="fqD-7e-toy" firstAttribute="centerX" secondItem="odC-Pa-ktb" secondAttribute="centerX" id="GJU-RY-GUm"/>
+                            <constraint firstItem="bVY-nb-zNN" firstAttribute="centerY" secondItem="odC-Pa-ktb" secondAttribute="centerY" id="YpA-cv-E8J"/>
+                            <constraint firstItem="bVY-nb-zNN" firstAttribute="centerX" secondItem="odC-Pa-ktb" secondAttribute="centerX" id="aIV-yu-C3z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="bVY-nb-zNN" id="yYI-kg-aNu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0V-94-s1N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1120" y="-375"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="EHB-76-pqH">
+            <objects>
+                <viewController id="dNs-IR-kAs" customClass="FourthViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xuo-EC-1pb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FourthViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfF-CY-8pb">
+                                <rect key="frame" x="86" y="378" width="221" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDp-8A-nxj">
+                                <rect key="frame" x="146.66666666666666" y="703" width="100" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JWW-GL-yL4"/>
+                                    <constraint firstAttribute="height" constant="40" id="VVe-Jt-4Qm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="뒤로가기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapeed:" destination="dNs-IR-kAs" eventType="touchUpInside" id="Wxe-uO-Lfa"/>
+                                    <action selector="backButtonTapped:" destination="4A6-7B-7hP" eventType="touchUpInside" id="x04-w2-Ixh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FLH-03-NZa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FLH-03-NZa" firstAttribute="bottom" secondItem="LDp-8A-nxj" secondAttribute="bottom" constant="40" id="NJ1-gX-Tbo"/>
+                            <constraint firstItem="SfF-CY-8pb" firstAttribute="centerX" secondItem="Xuo-EC-1pb" secondAttribute="centerX" id="TMa-O6-WnS"/>
+                            <constraint firstItem="SfF-CY-8pb" firstAttribute="centerY" secondItem="Xuo-EC-1pb" secondAttribute="centerY" id="h2K-5A-HfW"/>
+                            <constraint firstItem="LDp-8A-nxj" firstAttribute="centerX" secondItem="Xuo-EC-1pb" secondAttribute="centerX" id="ze6-fW-9Ti"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainLabel" destination="SfF-CY-8pb" id="n63-7R-m0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xq-k8-jd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-540" y="-419"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
