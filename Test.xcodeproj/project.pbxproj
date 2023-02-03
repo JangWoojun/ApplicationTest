@@ -13,11 +13,11 @@
 		302A0D18297CDBFC00643042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302A0D16297CDBFC00643042 /* Main.storyboard */; };
 		302A0D1A297CDBFD00643042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302A0D19297CDBFD00643042 /* Assets.xcassets */; };
 		302A0D1D297CDBFD00643042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302A0D1B297CDBFD00643042 /* LaunchScreen.storyboard */; };
-		302F3B5429873F9A00CB1D81 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3B5329873F9A00CB1D81 /* FirstViewController.swift */; };
-		302F3B5629873FA000CB1D81 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3B5529873FA000CB1D81 /* SecondViewController.swift */; };
-		302F3B5829873FA800CB1D81 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3B5729873FA800CB1D81 /* ThirdViewController.swift */; };
-		302F3B5A29873FB700CB1D81 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3B5929873FB700CB1D81 /* FourthViewController.swift */; };
-		302F3B5C29873FBE00CB1D81 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302F3B5B29873FBE00CB1D81 /* FifthViewController.swift */; };
+		3095A50B298C97A00032A91E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A50A298C97A00032A91E /* DetailViewController.swift */; };
+		3095A50D298C97B30032A91E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A50C298C97B30032A91E /* DetailView.swift */; };
+		3095A50F298C97B70032A91E /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A50E298C97B70032A91E /* MyTableViewCell.swift */; };
+		3095A511298C97BE0032A91E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A510298C97BE0032A91E /* DataManager.swift */; };
+		3095A513298C97C40032A91E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3095A512298C97C40032A91E /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +29,11 @@
 		302A0D19297CDBFD00643042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		302A0D1C297CDBFD00643042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		302A0D1E297CDBFD00643042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		302F3B5329873F9A00CB1D81 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		302F3B5529873FA000CB1D81 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		302F3B5729873FA800CB1D81 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThirdViewController.swift; path = "../../../Downloads/앱만들기자료_230102/AppBuild/6-네비게이션바와탭바/N&TProjectCode/N&TProjectCode/ThirdViewController.swift"; sourceTree = "<group>"; };
-		302F3B5929873FB700CB1D81 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		302F3B5B29873FBE00CB1D81 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		3095A50A298C97A00032A91E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3095A50C298C97B30032A91E /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3095A50E298C97B70032A91E /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		3095A510298C97BE0032A91E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3095A512298C97C40032A91E /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +68,11 @@
 			children = (
 				302A0D16297CDBFC00643042 /* Main.storyboard */,
 				302A0D14297CDBFC00643042 /* ViewController.swift */,
-				302F3B5329873F9A00CB1D81 /* FirstViewController.swift */,
-				302F3B5529873FA000CB1D81 /* SecondViewController.swift */,
-				302F3B5729873FA800CB1D81 /* ThirdViewController.swift */,
-				302F3B5929873FB700CB1D81 /* FourthViewController.swift */,
-				302F3B5B29873FBE00CB1D81 /* FifthViewController.swift */,
+				3095A50A298C97A00032A91E /* DetailViewController.swift */,
+				3095A50C298C97B30032A91E /* DetailView.swift */,
+				3095A50E298C97B70032A91E /* MyTableViewCell.swift */,
+				3095A510298C97BE0032A91E /* DataManager.swift */,
+				3095A512298C97C40032A91E /* Movie.swift */,
 				302A0D10297CDBFC00643042 /* AppDelegate.swift */,
 				302A0D12297CDBFC00643042 /* SceneDelegate.swift */,
 				302A0D19297CDBFD00643042 /* Assets.xcassets */,
@@ -156,11 +156,11 @@
 				302A0D15297CDBFC00643042 /* ViewController.swift in Sources */,
 				302A0D11297CDBFC00643042 /* AppDelegate.swift in Sources */,
 				302A0D13297CDBFC00643042 /* SceneDelegate.swift in Sources */,
-				302F3B5A29873FB700CB1D81 /* FourthViewController.swift in Sources */,
-				302F3B5C29873FBE00CB1D81 /* FifthViewController.swift in Sources */,
-				302F3B5629873FA000CB1D81 /* SecondViewController.swift in Sources */,
-				302F3B5829873FA800CB1D81 /* ThirdViewController.swift in Sources */,
-				302F3B5429873F9A00CB1D81 /* FirstViewController.swift in Sources */,
+				3095A511298C97BE0032A91E /* DataManager.swift in Sources */,
+				3095A50D298C97B30032A91E /* DetailView.swift in Sources */,
+				3095A50B298C97A00032A91E /* DetailViewController.swift in Sources */,
+				3095A513298C97C40032A91E /* Movie.swift in Sources */,
+				3095A50F298C97B70032A91E /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
